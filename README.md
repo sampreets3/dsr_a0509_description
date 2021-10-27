@@ -32,7 +32,22 @@ $ colcon build --packages-select dsr_a0509_description --symlink-install
 
 ---
 
+# Joint Control
 
+Currently, you can use the `joint_state_controller_gui` to control each joint of the robot individually.
 
+Once you have built the package, you can use the launch file `display.launch.py` to view the robot and control each joint.
+
+```sh
+$ ros2 launch dsr_a0509_description display.launch.py
+```
+
+This will start Rviz2 with the robot loaded, and will provide you with a joint controller, which you can use to actuate each joint as shown below.
+
+<p align="center">
+	<img src="resource/display.gif" width="600" height="400" />
+</p>
+
+---
 
 
