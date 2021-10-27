@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<robot name="doosan_a0509" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <link name="base" />
+  
+  <joint name="fixed" type="fixed">
+    <parent link="base" />
+    <child link="base_link" />
+  </joint>
+
+  <link name="base_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+          <mesh filename="package://robot_arm/meshes/A0509_0_0.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  
+  <joint name="shoulder_joint" type="revolute">
+    <parent link="base_link" />
+    <child link="shoulder_link" />
+    <origin xyz="0 0 0.1525" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="0" velocity="0.5" />
+  </joint>
+  
+  <link name="shoulder_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_1_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_1_1.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_1_2.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+  </link>
+
+  <joint name="elbow_joint" type="revolute">
+    <parent link="shoulder_link" />
+    <child link="elbow_link" />
+    <origin rpy="0 -1.571 -1.571" xyz="0 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="0" velocity="0.5" />
+  </joint>
+  
+  <link name="elbow_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_2_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_2_1.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_2_2.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+  </link>
+
+  <joint name="wrist_pitch_joint" type="revolute">
+    <parent link="elbow_link" />
+    <child link="wrist_pitch_link" />
+    <origin rpy="0 0 1.571" xyz="0.409 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="0" velocity="0.5" />
+  </joint>
+  
+  <link name="wrist_pitch_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_3_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_3_1.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+  </link>
+
+  <joint name="wrist_roll_joint" type="revolute">
+    <parent link="wrist_pitch_link" />
+    <child link="wrist_roll_link" />
+    <origin rpy="1.571 0 0" xyz="0 -0.367 0"/>
+    <axis xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="0" velocity="0.5" />
+  </joint>
+  
+  <link name="wrist_roll_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_4_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_4_1.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+  </link>
+
+  <joint name="wrist_yaw_joint" type="revolute">
+    <parent link="wrist_roll_link" />
+    <child link="wrist_yaw_link" />
+    <origin rpy="-1.571 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="0" velocity="0.5" />
+  </joint>
+  
+  <link name="wrist_yaw_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_5_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_5_1.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+  </link>
+
+  <joint name="end_effector_joint" type="revolute">
+    <parent link="wrist_yaw_link" />
+    <child link="end_effector_link" />
+    <origin rpy="1.571 0 0" xyz="0 -0.124 0"/>
+    <axis xyz="0 0 1" />
+    <limit lower="-1.57" upper="1.57" effort="0" velocity="0.5" />
+  </joint>
+  
+  <link name="end_effector_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://robot_arm/meshes/A0509_6_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </visual>
+  </link>
+
+</robot>
