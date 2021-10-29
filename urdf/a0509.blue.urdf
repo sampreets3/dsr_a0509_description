@@ -20,6 +20,11 @@
           <mesh filename="package://dsr_a0509_description/meshes/A0509_0_0.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
+    <collision>
+      <geometry>
+          <mesh filename="package://dsr_a0509_description/meshes/A0509_0_0.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
   </link>
   
   <joint name="shoulder_joint" type="revolute">
@@ -36,6 +41,7 @@
 	  <origin xyz="7e-05 0.044281 0.143327"/>
       <inertia ixx="0.039" ixy="2.1e-05" ixz="-3.61e-05" iyy="0.023" iyz="-0.003" izz="0.039"/>
     </inertial>
+
     <visual>
       <geometry>
         <mesh filename="package://dsr_a0509_description/meshes/A0509_1_0.dae" scale="0.001 0.001 0.001" />
@@ -54,6 +60,25 @@
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0" />
     </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_1_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+   </collision>
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_1_1.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_1_2.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
   </link>
 
   <joint name="elbow_joint" type="revolute">
@@ -70,6 +95,7 @@
 	    <origin xyz="-1.6e-05 0.189372 0.418558"/>
       <inertia ixx="0.820" ixy="1.19e-05" ixz="-0.000263" iyy="0.82" iyz="-0.008" izz="0.031"/>
     </inertial>
+
   	<visual>
       <geometry>
         <mesh filename="package://dsr_a0509_description/meshes/A0509_2_0.dae" scale="0.001 0.001 0.001" />
@@ -88,6 +114,25 @@
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0" />
     </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_2_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+   </collision>
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_2_1.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_2_2.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
   </link>
 
   <joint name="wrist_pitch_joint" type="revolute">
@@ -104,6 +149,7 @@
 	    <origin xyz="6e-06 0.07917 0.781807"/>
       <inertia ixx="0.012" ixy="-4.38e-06" ixz="-1.2e-06" iyy="0.008" iyz="0.002" izz="0.011"/>
     </inertial>
+    
     <visual>
       <geometry>
         <mesh filename="package://dsr_a0509_description/meshes/A0509_3_0.dae" scale="0.001 0.001 0.001" />
@@ -116,6 +162,19 @@
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0" />
     </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_3_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_3_1.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
   </link>
 
   <joint name="wrist_roll_joint" type="revolute">
@@ -132,6 +191,7 @@
 	    <origin xyz="-2.1e-05 0.12337 1.148"/>
       <inertia ixx="0.177" ixy="-2.34e-06" ixz="-4.92e-06" iyy="0.161" iyz="-0.05" izz="0.022"/>
     </inertial>
+
   	<visual>
       <geometry>
         <mesh filename="package://dsr_a0509_description/meshes/A0509_4_0.dae" scale="0.001 0.001 0.001" />
@@ -144,6 +204,19 @@
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0" />
     </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_4_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_4_1.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
   </link>
 
   <joint name="wrist_yaw_joint" type="revolute">
@@ -172,6 +245,19 @@
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0" />
     </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_5_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_5_1.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
   </link>
 
   <joint name="end_effector_joint" type="revolute">
@@ -188,12 +274,20 @@
 	    <origin xyz="-0.000174 0.034708 1.40022"/>
       <inertia ixx="0.001" ixy="-2.79e-06" ixz="5.78e-06" iyy="0.001" iyz="-6.67e-06" izz="0.001"/>
     </inertial>
+
   	<visual>
       <geometry>
         <mesh filename="package://dsr_a0509_description/meshes/A0509_6_0.dae" scale="0.001 0.001 0.001" />
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0" />
     </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="package://dsr_a0509_description/meshes/A0509_6_0.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
   </link>
 
 </robot>
